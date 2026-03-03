@@ -36,7 +36,7 @@ export default function Contact() {
       icon: MapPin,
       title: "Konum",
       detail: "Ankara / Karabük, Türkiye",
-      link: "https://maps.google.com/?q=Ankara+Karab%C3%BCk+T%C3%BCrkiye",
+      link: "https://maps.google.com",
       color: "from-purple-400 to-pink-500"
     }
   ];
@@ -157,7 +157,12 @@ export default function Contact() {
           </div>
 
           <div className="glass-card border grid-line p-8">
-            <form className="space-y-6">
+            {/* Formspree Entegrasyonu Yapıldı */}
+            <form 
+              action="https://formspree.io/f/xqedoore" 
+              method="POST" 
+              className="space-y-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -168,8 +173,10 @@ export default function Contact() {
                       <User className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
+                      name="name"
                       type="text"
                       id="name"
+                      required
                       className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                       placeholder="Adınızı girin"
                     />
@@ -185,8 +192,10 @@ export default function Contact() {
                       <AtSign className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
+                      name="email"
                       type="email"
                       id="email"
+                      required
                       className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                       placeholder="eposta@ornek.com"
                     />
@@ -199,6 +208,7 @@ export default function Contact() {
                   Konu
                 </label>
                 <input
+                  name="subject"
                   type="text"
                   id="subject"
                   className="block w-full px-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
@@ -215,8 +225,10 @@ export default function Contact() {
                     <MessageSquare className="h-5 w-5 text-gray-400" />
                   </div>
                   <textarea
+                    name="message"
                     id="message"
                     rows={6}
+                    required
                     className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 resize-none"
                     placeholder="Mesajınızı buraya yazabilirsiniz..."
                   ></textarea>
@@ -246,7 +258,6 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Active Social Links */}
             {activeSocialLinks.map((social, index) => (
               <a
                 key={index}
@@ -264,7 +275,6 @@ export default function Contact() {
               </a>
             ))}
             
-            {/* Passive Social Links with Click Handlers */}
             {passiveSocialLinks.map((social, index) => (
               <div
                 key={index}
@@ -283,62 +293,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Business Hours Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">İş Saatleri</h2>
-            <p className="text-gray-400 text-lg">Size en iyi hizmeti sunmak için buradayız</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card border grid-line p-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center neon-glow">
-                  <Building2 className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Ofis Saatleri</h3>
-                  <p className="text-gray-400">Karabük Üniversitesi</p>
-                </div>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Pazartesi - Cuma</span>
-                  <span className="text-white font-medium">09:00 - 17:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Cumartesi</span>
-                  <span className="text-white font-medium">09:00 - 13:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Pazar</span>
-                  <span className="text-gray-500">Kapalı</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-card border grid-line p-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center neon-glow">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Acil Durumlar</h3>
-                  <p className="text-gray-400">24/7 Destek</p>
-                </div>
-              </div>
-              
-              <p className="text-gray-400 leading-relaxed">
-                Acil bir durumunuz veya proje teklifiniz varsa,
-                e-posta veya telefon üzerinden bana ulaşabilirsiniz.
-                En kısa sürede dönüş yapacağım.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-indigo-900/20">
