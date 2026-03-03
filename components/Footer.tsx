@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link'
 import { Github, Linkedin, Instagram, Twitter } from 'lucide-react'
 
@@ -46,18 +48,18 @@ export default function Footer() {
           <div className="space-y-4">
             <div>
               <h3 className="text-xl font-bold text-white mb-2">Barış Can Daşcı</h3>
-              <p className="text-gray-400 text-sm">Bilgisayar Mühendisi Adayı</p>
+              <p className="text-gray-400 text-sm">Bilgisayar Mühendisliği ve mimari estetiği bir arada</p>
             </div>
             <div className="pt-4 border-t border-white/10">
               <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()} Tüm hakları saklıdır.
+                © {new Date().getFullYear()} Barış Can Daşcı. Tüm hakları saklıdır.
               </p>
             </div>
           </div>
 
           {/* Center Column - Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Hızlı Linkler</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Hızlı Bağlantılar</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -102,7 +104,7 @@ export default function Footer() {
                   
                   {/* Hover Tooltip */}
                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white text-black text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-nowrap">
-                    Çok yakında bu platformlarda da birlikte olacağız!
+                    Yakında
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
                   </div>
                 </div>
@@ -112,21 +114,21 @@ export default function Footer() {
               <p>İnovasyon ve teknolojiye tutkuyla bağlı bir mühendis adayı.</p>
             </div>
           </div>
-        </div>
 
-        {/* Bottom Divider */}
-        <div className="mt-8 pt-6 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-500 text-sm">
-              Karabük Üniversitesi • Bilgisayar Mühendisliği
-            </p>
-            <div className="flex space-x-6 text-gray-400 text-sm">
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
-                Gizlilik Politikası
-              </Link>
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors">
-                Kullanım Şartları
-              </Link>
+          {/* Bottom Divider */}
+          <div className="mt-8 pt-6 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-500 text-sm">
+                Karabük Üniversitesi
+              </p>
+              <div className="flex space-x-6 text-gray-400 text-sm">
+                <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
+                  Gizlilik Politikası
+                </Link>
+                <Link href="/terms" className="hover:text-cyan-400 transition-colors">
+                  Kullanım Şartları
+                </Link>
+              </div>
             </div>
           </div>
         </div>

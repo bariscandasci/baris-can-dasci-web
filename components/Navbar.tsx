@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, Code, Rocket, Award } from 'lucide-react'
+import { Menu, X, Code } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,16 +47,22 @@ export default function Navbar() {
               Projeler
             </Link>
             <Link 
-              href="/contact" 
+              href="/skills" 
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
-              İletişim
+              Yetenekler
             </Link>
             <Link 
               href="/certificates" 
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
-              Sertifikalarım
+              Sertifikalar
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
+            >
+              İletişim
             </Link>
           </div>
 
@@ -101,18 +107,25 @@ export default function Navbar() {
                 Projeler
               </Link>
               <Link 
+                href="/skills" 
+                className="block text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Yetenekler
+              </Link>
+              <Link 
+                href="/certificates" 
+                className="block text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Sertifikalar
+              </Link>
+              <Link 
                 href="/contact" 
                 className="block text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsOpen(false)}
               >
                 İletişim
-              </Link>
-              <Link 
-                href="/skills"
-                className="block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Yeteneklerim
               </Link>
             </div>
           </div>

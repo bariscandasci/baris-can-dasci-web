@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link'
 import {
   Rocket,
@@ -13,23 +15,24 @@ import {
 } from 'lucide-react'
 
 export default function Projects() {
+  
   const ongoingProjects = [
     {
       id: 1,
-      title: 'Teknofest: Mobil Uydu Yer Terminali',
-      description: 'Ekip kaptanlığı yaptığım bu projede, uydu haberleşme sistemleri üzerine çalışıyorum. Uydu verilerinin toplanması, işlenmesi ve analiz edilmesi için modern teknolojiler kullanıyorum.',
+      title: 'Hicaz Hyperloop',
+      description: 'Yüksek hızlı tren sistemleri üzerine araştırma ve geliştirme projesi',
       technologies: ['Python', 'C++', 'Raspberry Pi', 'RF Modüller'],
-      status: 'Devam Ediyor',
+      status: 'Liderlik ve Koordinasyon',
       icon: Satellite,
       githubUrl: 'https://github.com/bariscandasci/uydu-projesi',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       id: 2,
-      title: 'Hyperloop Test Altyapısı',
-      description: 'Python kullanarak sanal haberleşme ve test altyapısı geliştiriyorum. Sistem simülasyonları, veri analizi ve test otomasyonu üzerine odaklanıyorum.',
+      title: 'PUHU Uydu Projesi',
+      description: 'Uzay araştırmaları ve uydu teknolojileri üzerine proje',
       technologies: ['Python', 'Docker', 'REST API', 'Test Automation'],
-      status: 'Devam Ediyor',
+      status: 'Liderlik ve Koordinasyon',
       icon: Rocket,
       githubUrl: 'https://github.com/bariscandasci/hyperloop-test',
       color: 'from-indigo-500 to-purple-500'
@@ -91,7 +94,7 @@ export default function Projects() {
 
         {/* Technologies */}
         <div className="mb-8">
-          <h4 className="text-lg font-semibold text-white mb-4">Kullandığım Teknolojiler</h4>
+          <h4 className="text-lg font-semibold text-white mb-4">Kullanılan Teknolojiler</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech: string, index: number) => (
               <span
@@ -110,7 +113,7 @@ export default function Projects() {
             href={`/projects/${project.id}`}
             className="flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 group"
           >
-            <span>Proje Detaylarını Gör</span>
+            <span>Detaylar</span>
             <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
           
@@ -138,7 +141,7 @@ export default function Projects() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full px-6 py-3 mb-8">
               <Code className="w-5 h-5 text-white" />
-              <span className="text-sm font-medium text-white">Projelerim</span>
+              <span className="text-sm font-medium text-white">Projeler</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -147,9 +150,7 @@ export default function Projects() {
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Teknofest'ten mobil uygulamalara, bulut entegrasyonundan masaüstü çözümlerine
-              kadar geliştirdiğim projeleri inceleyin. Her proje, teknik uzmanlığımın ve
-              yaratıcı vizyonumun somut bir kanıtıdır.
+              Bilgisayar Mühendisliği öğrencisi ve dijital mimar
             </p>
           </div>
         </div>
@@ -160,7 +161,7 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Devam Eden Projeler</h2>
-            <p className="text-gray-400 text-lg">Şu anda aktif olarak üzerinde çalıştığım yenilikçi projeler</p>
+            <p className="text-gray-400 text-lg">Bilgisayar Mühendisliği öğrencisi ve dijital mimar</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -175,8 +176,8 @@ export default function Projects() {
       <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tamamlanan Projeler</h2>
-            <p className="text-gray-400 text-lg">Geçmişte başarıyla tamamladığım ve deneyim kazandırdı projeler</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tamamlanmış Projeler</h2>
+            <p className="text-gray-400 text-lg">Bilgisayar Mühendisliği öğrencisi ve dijital mimar</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -192,19 +193,17 @@ export default function Projects() {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="glass-card border grid-line p-12 neon-glow-cyan">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Projelerimle Çalışmaya Hazır mısınız?
+              Hazır mısınız?
             </h2>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Yenilikçi projeleriniz için teknik uzmanlık ve yaratıcı vizyonu birleştiren
-              bir ortak arıyorsanız, doğru adrestesiniz. İlerideki projelerimde de
-              aynı tutku ve profesyonellikle çalışmaya hazırım.
+              Her türlü soru ve iş birliği teklifleriniz için bana ulaşabilirsiniz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                İş Birlikleri İçin İletişime Geçin
+                İş Birliği
               </Link>
               <Link href="/certificates" className="btn-secondary">
-                Sertifikalarımı İnceleyin
+                Sertifikalar
               </Link>
             </div>
           </div>

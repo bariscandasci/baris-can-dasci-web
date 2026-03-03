@@ -101,7 +101,7 @@ export default function Contact() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="mailto:bariscan.dasci@ogr.karabuk.edu.tr" className="btn-primary flex items-center space-x-3">
+                <a href="mailto:bariscandasci1@gmail.com" className="btn-primary flex items-center space-x-3">
                   <Mail className="w-5 h-5" />
                   <span>E-posta Gönder</span>
                 </a>
@@ -306,7 +306,7 @@ export default function Contact() {
               bir ortak arıyorsanız, doğru adrestesiniz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:bariscan.dasci@ogr.karabuk.edu.tr" className="btn-primary">
+              <a href="mailto:bariscandasci1@gmail.com" className="btn-primary">
                 E-posta Gönder
               </a>
               <a href="#contact-form" className="btn-secondary">

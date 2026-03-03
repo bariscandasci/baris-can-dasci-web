@@ -18,73 +18,31 @@ export default function Skills() {
       title: "Programlama Dilleri",
       icon: Code,
       color: "from-cyan-400 to-blue-500",
-      skills: [
-        { name: "Java", level: 85, description: "Nesne yönelimli programlama ve enterprise uygulamalar" },
-        { name: "Python", level: 90, description: "Veri analizi, yapay zeka ve otomasyon" },
-        { name: "JavaScript", level: 95, description: "Modern web geliştirme ve Node.js" },
-        { name: "TypeScript", level: 90, description: "Tip güvenli JavaScript geliştirme" },
-        { name: "C/C++", level: 75, description: "Sistem programlama ve embedded sistemler" },
-        { name: "SQL", level: 85, description: "Veritabanı yönetimi ve sorgulama" }
-      ]
+      skills: ["C", "Java", "Python", "JavaScript", "SQL"]
     },
     {
       title: "Web Geliştirme",
       icon: Globe,
       color: "from-indigo-400 to-purple-500",
-      skills: [
-        { name: "Next.js", level: 95, description: "Modern React framework ve SSR" },
-        { name: "React", level: 90, description: "Component tabanlı UI geliştirme" },
-        { name: "Tailwind CSS", level: 95, description: "Utility-first CSS framework" },
-        { name: "Node.js", level: 85, description: "Server-side JavaScript geliştirme" },
-        { name: "Express.js", level: 85, description: "Web API ve backend geliştirme" },
-        { name: "RESTful APIs", level: 90, description: "API tasarımı ve geliştirme" }
-      ]
+      skills: ["HTML", "CSS", "Next.js", "Node.js"]
     },
     {
       title: "Veri Tabanları",
       icon: Database,
       color: "from-purple-400 to-pink-500",
-      skills: [
-        { name: "MongoDB", level: 85, description: "NoSQL veritabanı yönetimi" },
-        { name: "PostgreSQL", level: 80, description: "İlişkisel veritabanı sistemleri" },
-        { name: "Redis", level: 75, description: "Önbellekleme ve hızlı veri erişimi" },
-        { name: "Firebase", level: 80, description: "Bulut tabanlı veritabanı ve analiz" },
-        { name: "Prisma", level: 85, description: "Modern ORM ve veritabanı yönetimi" }
-      ]
+      skills: ["Firebase", "MongoDB"]
     },
     {
       title: "Sistem & Altyapı",
       icon: Server,
       color: "from-cyan-400 to-indigo-500",
-      skills: [
-        { name: "Docker", level: 85, description: "Konteynerizasyon ve dağıtım" },
-        { name: "Git", level: 90, description: "Sürüm kontrolü ve iş birliği" },
-        { name: "Linux", level: 80, description: "Sistem yönetimi ve komut satırı" },
-        { name: "AWS", level: 70, description: "Bulut bilişim hizmetleri" },
-        { name: "CI/CD", level: 80, description: "Sürekli entegrasyon ve dağıtım" }
-      ]
+      skills: ["Git", "Linux"]
     },
     {
       title: "Yapay Zeka & Veri Bilimi",
       icon: Brain,
       color: "from-blue-400 to-cyan-500",
-      skills: [
-        { name: "Machine Learning", level: 75, description: "Makine öğrenimi algoritmaları" },
-        { name: "TensorFlow", level: 70, description: "Derin öğrenme framework'u" },
-        { name: "Data Analysis", level: 80, description: "Veri analizi ve görselleştirme" },
-        { name: "Python Libraries", level: 85, description: "NumPy, Pandas, Matplotlib" }
-      ]
-    },
-    {
-      title: "Mimari & Tasarım",
-      icon: Settings,
-      color: "from-green-400 to-blue-500",
-      skills: [
-        { name: "Clean Architecture", level: 85, description: "Temiz ve sürdürülebilir mimari" },
-        { name: "Microservices", level: 75, description: "Mikroservis mimarileri" },
-        { name: "Design Patterns", level: 80, description: "Tasarım kalıpları ve best practices" },
-        { name: "UML", level: 75, description: "Sistem modelleme ve tasarım" }
-      ]
+      skills: ["Machine Learning", "Data Analysis", "Python Libraries"]
     }
   ];
 
@@ -152,20 +110,10 @@ export default function Skills() {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="group">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-medium">{skill.name}</span>
-                        <span className="text-gray-400 text-sm">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className={`h-2 rounded-full bg-gradient-to-r ${category.color} transition-all duration-1000 ease-out group-hover:scale-105`}
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                      <p className="text-gray-500 text-sm mt-1">{skill.description}</p>
+                    <div key={skillIndex} className="flex items-center justify-between">
+                      <span className="text-white font-medium">{skill}</span>
                     </div>
                   ))}
                 </div>
@@ -241,29 +189,6 @@ export default function Skills() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-indigo-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="glass-card border grid-line p-8">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-              <p className="text-gray-400 text-sm">Kod Satırı</p>
-            </div>
-            <div className="glass-card border grid-line p-8">
-              <div className="text-3xl font-bold text-indigo-400 mb-2">100%</div>
-              <p className="text-gray-400 text-sm">Test Edilmiş</p>
-            </div>
-            <div className="glass-card border grid-line p-8">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-              <p className="text-gray-400 text-sm">Güncel</p>
-            </div>
-            <div className="glass-card border grid-line p-8">
-              <div className="text-3xl font-bold text-pink-400 mb-2">0</div>
-              <p className="text-gray-400 text-sm">Hata</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20">

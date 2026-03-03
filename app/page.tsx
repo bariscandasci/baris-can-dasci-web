@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -29,7 +31,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             <div className="relative w-48 h-48 md:w-64 md:h-64">
               <Image
-                src="/resimler/baris.jpeg" // <-- Baştaki klasör ismini sildik
+                src="/resimler/baris.jpeg"
                 alt="Barış Can Daşcı"
                 fill
                 className="rounded-full object-cover border-4 border-white/20 shadow-2xl"
@@ -43,12 +45,12 @@ export default function Home() {
                 <span className="text-gradient block">Daşcı</span>
               </h1>
               <p className="text-cyan-400 text-lg font-medium">Bilgisayar Mühendisi</p>
+              <p className="text-xs font-mono text-gray-500 mt-1">i am {'>'} i was</p>
             </div>
           </div>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Bilgisayar Mühendisliği öğrencisi olarak teknoloji ve mimarinin kesişiminde
-            yenilikçi çözümler üretiyorum. Dijital dünyayı şekillendirmek için buradayım.
+            Yarının dijital mimarisini bugünün disipliniyle inşa ediyorum
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -65,7 +67,7 @@ export default function Home() {
               className="btn-secondary flex items-center space-x-3"
             >
               <Monitor className="w-5 h-5 text-cyan-400" />
-              <span>Projelerim</span>
+              <span>Projeler</span>
             </Link>
           </div>
 
@@ -76,7 +78,7 @@ export default function Home() {
       <section className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Mimari Yaklaşımım</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Hakkımda</h2>
             <p className="text-gray-400 text-lg">Bilgisayar Mühendisliği ve mimari estetiği bir arada</p>
           </div>
 
@@ -85,7 +87,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Kod Mimarisi</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Yetenekler</h3>
               <p className="text-gray-400 leading-relaxed">
                 Temiz, okunabilir ve sürdürülebilir kod yapıları oluşturuyorum.
                 Her satır bir bina taşı gibi sağlam ve amaçlı.
@@ -96,7 +98,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Sistem Tasarımı</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">İlgi Alanları</h3>
               <p className="text-gray-400 leading-relaxed">
                 Ölçeklenebilir ve esnek sistem mimarileri geliştiriyorum.
                 Her yapı gibi uzun ömürlü ve güçlü çözümler.
@@ -107,7 +109,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Monitor className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Kullanıcı Deneyimi</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">Eğitim</h3>
               <p className="text-gray-400 leading-relaxed">
                 Kullanıcı odaklı ve estetik açıdan etkileyici arayüzler tasarlıyorum.
                 Teknoloji ve sanatın buluşma noktası.
@@ -122,18 +124,17 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="glass-card border grid-line p-12 neon-glow-cyan">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Geleceğin Mimarları ile Çalışmaya Hazır mısınız?
+              İletişim
             </h2>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Yenilikçi projeleriniz için teknik uzmanlık ve yaratıcı vizyonu birleştiren
-              bir ortak arıyorsanız, doğru adrestesiniz.
+              Her türlü soru ve iş birliği teklifleriniz için bana ulaşabilirsiniz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="btn-primary">
-                İletişime Geçin
+                İletişim
               </Link>
               <Link href="/projects" className="btn-secondary">
-                Projelerimi İnceleyin
+                Projeler
               </Link>
             </div>
           </div>
