@@ -50,7 +50,7 @@ export default function Home() {
           </div>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Yarının dijital mimarisini bugünün disipliniyle inşa ediyorum
+            Sincaplar sadece sevdikleri insanlara görünmek isterler
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
