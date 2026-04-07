@@ -15,11 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Barış Can Daşcı | Future Architect",
+  title: "Barış Can Daşcı",
   description: "Geleceği kodla inşa ediyoruz - Bilgisayar Mühendisliği öğrencisi ve dijital mimar",
   keywords: "Barış Can Daşcı, Next.js, Tailwind CSS, web geliştirme, portfolyo",
   authors: [{ name: "Barış Can Daşcı" }],
   viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: [{ url: '/resimler/baris.jpeg', type: 'image/jpeg' }],
+    shortcut: '/resimler/baris.jpeg',
+    apple: '/resimler/baris.jpeg',
+  },
 };
 
 export default function RootLayout({

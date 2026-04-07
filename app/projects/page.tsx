@@ -18,16 +18,6 @@ export default function Projects() {
   
   const ongoingProjects = [
     {
-      id: 1,
-      title: 'Hicaz Hyperloop',
-      description: 'Yüksek hızlı tren sistemleri üzerine araştırma ve geliştirme projesi',
-      technologies: ['Python', 'C++', 'Raspberry Pi', 'RF Modüller'],
-      status: 'Liderlik ve Koordinasyon',
-      icon: Satellite,
-      githubUrl: 'https://github.com/bariscandasci/uydu-projesi',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
       id: 2,
       title: 'PUHU Uydu Projesi',
       description: 'Uzay araştırmaları ve uydu teknolojileri üzerine proje',
@@ -109,23 +99,17 @@ export default function Projects() {
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href={`/projects/${project.id}`}
-            className="flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 group"
-          >
+          <div className="flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-medium opacity-50 cursor-not-allowed">
             <span>Detaylar</span>
-            <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </Link>
+            <Play className="w-5 h-5" />
+          </div>
           
-          <Link
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-3 border border-gray-600 text-gray-300 px-6 py-3 rounded-full font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
-          >
+          <div className="flex items-center space-x-3 border border-gray-600 text-gray-300 px-6 py-3 rounded-full font-medium opacity-50 cursor-not-allowed">
             <Github className="w-5 h-5" />
             <span>GitHub</span>
-          </Link>
+          </div>
+          
+          <span className="text-sm text-gray-400 italic self-center">Yakında yayınlanacak</span>
         </div>
       </div>
     </div>

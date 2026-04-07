@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Gelecek Burada Mühendislik",
+    "date": "2026-04-07",
+    "summary": "Mühendislik projeleri ve gelişim süreci üzerine paylaşımlarım.",
+    "linkedinUrl": "https://www.linkedin.com/posts/bar%C4%B1%C5%9F-can-da%C5%9Fci-809541340_gelecekburada-maeshendislik-projeyazaftmaft-share-7446863625404723201-V-fa",
+    "imageUrl": "/resimler/baris.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "HTML5 ve Web Geliştirme",
+    "date": "2026-04-07",
+    "summary": "Modern web teknolojileri ve geliştirme süreçleri üzerine düşüncelerim.",
+    "linkedinUrl": "https://www.linkedin.com/posts/bar%C4%B1%C5%9F-can-da%C5%9Fci-809541340_html5-webgeliagntirme-yazaftlaftmgeliagntirme-share-7446857653122899968-kvUU",
+    "imageUrl": "/resimler/baris.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Kariyer Gelişimi ve Yetkinlik",
+    "date": "2026-04-07",
+    "summary": "Kariyer yolculuğu ve yetkinlik kazanımı üzerine deneyimlerim.",
+    "linkedinUrl": "https://www.linkedin.com/posts/bar%C4%B1%C5%9F-can-da%C5%9Fci-809541340_kariyergeliagnimi-yetkinlikhamlesi-kariyer-share-7446856020632612864-Nyhc",
+    "imageUrl": "/resimler/baris.jpeg"
+  }
+]

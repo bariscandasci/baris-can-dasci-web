@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, Code } from 'lucide-react'
+import { Menu, X, Code, Rss } from 'lucide-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -57,6 +57,13 @@ export default function Navbar() {
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
               Sertifikalar
+            </Link>
+            <Link 
+              href="/feed" 
+              className="text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center space-x-1"
+            >
+              <Rss className="w-4 h-4" />
+              <span>Akış</span>
             </Link>
             <Link 
               href="/contact" 
@@ -119,6 +126,14 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Sertifikalar
+              </Link>
+              <Link 
+                href="/feed" 
+                className="block text-gray-300 hover:text-white transition-colors duration-300 font-medium py-2 flex items-center space-x-2"
+                onClick={() => setIsOpen(false)}
+              >
+                <Rss className="w-4 h-4" />
+                <span>Akış</span>
               </Link>
               <Link 
                 href="/contact" 
