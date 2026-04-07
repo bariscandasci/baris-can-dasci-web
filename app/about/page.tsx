@@ -221,17 +221,7 @@ export default function About() {
             <p className="text-gray-400 text-lg">Liderlik ve Koordinasyon</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="glass-card border grid-line hover:border-cyan-400 transition-all duration-300 group text-center">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Satellite className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Hicaz Hyperloop</h3>
-                <p className="text-gray-400 text-sm">Yüksek hızlı tren sistemleri üzerine araştırma ve geliştirme projesi</p>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
             <div className="glass-card border grid-line hover:border-indigo-400 transition-all duration-300 group text-center">
               <div className="p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
