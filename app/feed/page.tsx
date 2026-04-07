@@ -115,7 +115,7 @@ export default function Feed() {
               Güncel paylaşımlarımı takip etmek için LinkedIn'de bana katılın.
             </p>
             <Link
-              href="https://linkedin.com/in/bariscandasci"
+              href="https://www.linkedin.com/in/barış-can-daşci-809541340?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center space-x-3"

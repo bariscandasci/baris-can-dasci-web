@@ -128,6 +128,9 @@ export default function Footer() {
                 <Link href="/terms" className="hover:text-cyan-400 transition-colors">
                   Kullanım Şartları
                 </Link>
+                <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" download className="hover:text-cyan-400 transition-colors">
+                  CV İndir
+                </a>
               </div>
             </div>
           </div>
