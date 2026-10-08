@@ -86,26 +86,19 @@ export default function Certificates() {
   return (
     <div className="min-h-screen bg-[#050505]">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full px-6 py-3">
-              <Award className="w-5 h-5 text-white" />
-              <span className="text-sm font-medium text-white">Sertifikalarım</span>
-            </div>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Yeteneklerimin
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500 block">Dijital Kanıtları</span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Sürekli öğrenen bir mühendis adayı olarak, edindiğim bilgileri resmi belgelerle 
-            teyit ediyorum. Bu sertifikalar, profesyonel gelişimimin ve uzmanlık alanlarımın 
-            somut göstergeleridir.
-          </p>
-        </div>
+      <section className="mx-auto max-w-6xl px-4 pb-4 pt-6 sm:px-6">
+        <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-amber-200/80">
+          <Award className="h-4 w-4" />
+          Sertifikalar
+        </p>
+        <h1 className="mt-3 max-w-3xl text-5xl text-white sm:text-7xl">
+          Öğrendiklerimin
+          <span className="text-gradient block">dijital kanıtı</span>
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-300">
+          Sürekli öğrenen bir mühendis adayı olarak edindiğim bilgileri belgelerle teyit ediyorum.
+          Bu sertifikalar, gelişimimin somut göstergeleri.
+        </p>
       </section>
 
       {/* Certificates Grid Section */}

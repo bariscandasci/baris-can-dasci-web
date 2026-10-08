@@ -1,72 +1,80 @@
 "use client";
 
-import Link from 'next/link'
-import { Github, Linkedin, Instagram, Twitter } from 'lucide-react'
+import Link from "next/link";
+import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   const activeSocialLinks = [
     {
-      name: 'GitHub',
-      href: 'https://github.com/bariscandasci',
+      name: "GitHub",
+      href: "https://github.com/bariscandasci",
       icon: Github,
-      active: true,
     },
     {
-      name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/bar%C4%B1%C5%9F-can-da%C5%9Fci-809541340/',
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/bar%C4%B1%C5%9F-can-da%C5%9Fci-809541340/",
       icon: Linkedin,
-      active: true,
     },
-  ]
+  ];
 
   const passiveSocialLinks = [
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      active: false,
-    },
-    {
-      name: 'X (Twitter)',
-      icon: Twitter,
-      active: false,
-    },
-  ]
+    { name: "Instagram", icon: Instagram },
+    { name: "X (Twitter)", icon: Twitter },
+  ];
 
   const quickLinks = [
-    { name: 'Ana Sayfa', href: '/' },
-    { name: 'Hakkımda', href: '/about' },
-    { name: 'Projeler', href: '/projects' },
-    { name: 'Sertifikalar', href: '/certificates' },
-    { name: 'İletişim', href: '/contact' },
-  ]
+    { name: "Ana Sayfa", href: "/" },
+    { name: "Hakkımda", href: "/about" },
+    { name: "Projeler", href: "/projects" },
+    { name: "Yetenekler", href: "/skills" },
+    { name: "Sertifikalar", href: "/certificates" },
+    { name: "Akış", href: "/feed" },
+    { name: "İletişim", href: "/contact" },
+  ];
 
   return (
-    <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left Column - Brand */}
-          <div className="space-y-4">
-            <div>
-              <h3 className="text-xl font-bold text-white mb-2">Barış Can Daşcı</h3>
-              <p className="text-gray-400 text-sm">Bilgisayar Mühendisliği ve mimari estetiği bir arada</p>
-            </div>
-            <div className="pt-4 border-t border-white/10">
-              <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()} Barış Can Daşcı. Tüm hakları saklıdır.
-              </p>
+    <footer className="mt-8 border-t border-white/10">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="text-xs uppercase tracking-[0.22em] text-amber-200/80">Portfolyo</p>
+            <h3 className="mt-3 text-3xl text-white">Barış Can Daşcı</h3>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-zinc-400">
+              Bilgisayar mühendisliği ve mimari estetiği bir arada. Karmaşık sistemleri sade,
+              çalışan ürünlere dönüştürüyorum.
+            </p>
+            <div className="mt-6 flex items-center gap-3">
+              {activeSocialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/5 text-white transition hover:-translate-y-0.5 hover:border-cyan-300/60 hover:text-cyan-200"
+                >
+                  <social.icon className="h-5 w-5" />
+                </Link>
+              ))}
+              {passiveSocialLinks.map((social) => (
+                <div key={social.name} className="group relative">
+                  <div className="grid h-11 w-11 cursor-not-allowed place-items-center rounded-full border border-white/10 text-zinc-600">
+                    <social.icon className="h-5 w-5" />
+                  </div>
+                  <div className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded-lg bg-white px-2 py-1 text-xs text-black opacity-0 transition group-hover:opacity-100">
+                    Yakında
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Center Column - Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Hızlı Bağlantılar</h4>
-            <ul className="space-y-2">
+          <div className="md:col-span-3">
+            <h4 className="text-sm uppercase tracking-[0.18em] text-zinc-500">Sayfalar</h4>
+            <ul className="mt-4 space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                  >
+                  <Link href={link.href} className="text-sm text-zinc-300 transition hover:text-amber-200">
                     {link.name}
                   </Link>
                 </li>
@@ -74,68 +82,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right Column - Social Media */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Sosyal Medya</h4>
-            <div className="flex space-x-4">
-              {/* Active Social Links */}
-              {activeSocialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-cyan-400 transition-colors duration-300 p-2 rounded-lg hover:bg-white/5"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-6 h-6" />
-                </Link>
-              ))}
-              
-              {/* Passive Social Links with Hover Tooltips */}
-              {passiveSocialLinks.map((social) => (
-                <div
-                  key={social.name}
-                  className="relative group"
-                >
-                  <div className="text-gray-500 opacity-50 cursor-not-allowed p-2 rounded-lg hover:bg-white/5 transition-colors duration-300">
-                    <social.icon className="w-6 h-6" />
-                  </div>
-                  
-                  {/* Hover Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-white text-black text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none whitespace-nowrap">
-                    Yakında
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 text-gray-500 text-sm">
-              <p>İnovasyon ve teknolojiye tutkuyla bağlı bir mühendis adayı.</p>
-            </div>
+          <div className="md:col-span-4">
+            <h4 className="text-sm uppercase tracking-[0.18em] text-zinc-500">Şu an</h4>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-300">
+              Karabük Üniversitesi Bilgisayar Mühendisliği, 2. sınıf. Teknofest ekip kaptanı ve
+              teknoloji kulübü kurucusu.
+            </p>
+            <a href="/CV.pdf" download className="btn-secondary mt-6 text-sm">
+              CV İndir
+            </a>
           </div>
+        </div>
 
-          {/* Bottom Divider */}
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-gray-500 text-sm">
-                Karabük Üniversitesi
-              </p>
-              <div className="flex space-x-6 text-gray-400 text-sm">
-                <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
-                  Gizlilik Politikası
-                </Link>
-                <Link href="/terms" className="hover:text-cyan-400 transition-colors">
-                  Kullanım Şartları
-                </Link>
-                <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" download className="hover:text-cyan-400 transition-colors">
-                  CV İndir
-                </a>
-              </div>
-            </div>
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Barış Can Daşcı</p>
+          <div className="flex gap-5">
+            <Link href="/privacy" className="hover:text-white">Gizlilik</Link>
+            <Link href="/terms" className="hover:text-white">Kullanım Şartları</Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

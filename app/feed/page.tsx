@@ -8,36 +8,22 @@ export default function Feed() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-4 mb-8">
-              <Link 
-                href="/" 
-                className="inline-flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <ArrowLeft className="w-5 h-5" />
-                <span>Ana Sayfa</span>
-              </Link>
-              
-              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full px-6 py-3">
-                <Rss className="w-5 h-5 text-white" />
-                <span className="text-sm font-medium text-white">Akış</span>
-              </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Genel
-              <span className="text-gradient block">Akış</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Mühendislik, teknoloji ve kariyer gelişimi üzerine paylaşımlar
-            </p>
-          </div>
-        </div>
+      <section className="mx-auto max-w-6xl px-4 pb-4 pt-6 sm:px-6">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-white">
+          <ArrowLeft className="h-4 w-4" />
+          Ana sayfa
+        </Link>
+        <p className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-amber-200/80">
+          <Rss className="h-4 w-4" />
+          Akış
+        </p>
+        <h1 className="mt-3 text-5xl text-white sm:text-7xl">
+          Genel
+          <span className="text-gradient block">akış</span>
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg text-zinc-300">
+          Mühendislik, teknoloji ve kariyer gelişimi üzerine paylaşımlar.
+        </p>
       </section>
 
       {/* Feed Cards */}

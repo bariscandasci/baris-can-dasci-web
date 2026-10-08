@@ -76,10 +76,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="relative mx-auto max-w-6xl px-4 pb-4 pt-6 sm:px-6">
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-8">
@@ -177,7 +175,7 @@ export default function Contact() {
                       type="text"
                       id="name"
                       required
-                      className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                      className="block w-full rounded-2xl border border-white/10 bg-black/40 py-3 pl-10 pr-3 text-white placeholder-zinc-500 outline-none transition focus:border-amber-200/40 focus:ring-2 focus:ring-amber-200/40"
                       placeholder="Adınızı girin"
                     />
                   </div>
@@ -196,7 +194,7 @@ export default function Contact() {
                       type="email"
                       id="email"
                       required
-                      className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                      className="block w-full rounded-2xl border border-white/10 bg-black/40 py-3 pl-10 pr-3 text-white placeholder-zinc-500 outline-none transition focus:border-amber-200/40 focus:ring-2 focus:ring-amber-200/40"
                       placeholder="eposta@ornek.com"
                     />
                   </div>
@@ -211,7 +209,7 @@ export default function Contact() {
                   name="subject"
                   type="text"
                   id="subject"
-                  className="block w-full px-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                  className="block w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder-zinc-500 outline-none transition focus:border-amber-200/40 focus:ring-2 focus:ring-amber-200/40"
                   placeholder="Mesajınızın konusunu girin"
                 />
               </div>
@@ -229,7 +227,7 @@ export default function Contact() {
                     id="message"
                     rows={6}
                     required
-                    className="block w-full pl-10 pr-3 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 resize-none"
+                    className="block w-full resize-none rounded-2xl border border-white/10 bg-black/40 py-3 pl-10 pr-3 text-white placeholder-zinc-500 outline-none transition focus:border-amber-200/40 focus:ring-2 focus:ring-amber-200/40"
                     placeholder="Mesajınızı buraya yazabilirsiniz..."
                   ></textarea>
                 </div>
@@ -257,7 +255,7 @@ export default function Contact() {
             <p className="text-gray-400 text-lg">Profesyonel ağlarımızda takip edin</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {activeSocialLinks.map((social, index) => (
               <a
                 key={index}

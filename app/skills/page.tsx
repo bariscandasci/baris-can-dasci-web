@@ -60,37 +60,18 @@ export default function Skills() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <div className="mb-8">
-              <div className="inline-flex items-center space-x-3 bg-black/30 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 glass-card">
-                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-300">Teknik Mimari</span>
-              </div>
-            </div>
-
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="block">Yeteneklerim</span>
-              <span className="text-gradient block">& Uzmanlıklarım</span>
-            </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Bilgisayar Mühendisliği ve mimari tasarımın kesişiminde uzmanlaşmış
-              teknik becerilerim. Her yapı gibi sağlam temeller üzerine inşa edilmiş uzmanlıklar.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/projects" className="btn-primary">
-                Projelerimi İnceleyin
-              </a>
-              <a href="/contact" className="btn-secondary">
-                İş Birliği İçin
-              </a>
-            </div>
-          </div>
+      <section className="mx-auto max-w-6xl px-4 pb-4 pt-6 sm:px-6">
+        <p className="text-xs uppercase tracking-[0.22em] text-amber-200/80">Teknik mimari</p>
+        <h1 className="mt-3 max-w-3xl text-5xl text-white sm:text-7xl">
+          Yetenekler
+          <span className="text-gradient block">ve uzmanlık</span>
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg text-zinc-300">
+          Bilgisayar mühendisliği ile arayüz tasarımının kesişiminde kullandığım araçlar.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href="/projects" className="btn-primary">Projeleri incele</a>
+          <a href="/contact" className="btn-secondary">İş birliği</a>
         </div>
       </section>
 
@@ -106,15 +87,15 @@ export default function Skills() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{category.title}</h3>
-                    <p className="text-gray-400">Uzmanlık alanları ve beceri seviyeleri</p>
+                    <p className="text-gray-400">Kullandığım araçlar</p>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="flex items-center justify-between">
-                      <span className="text-white font-medium">{skill}</span>
-                    </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span key={skill} className="rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-sm text-zinc-100">
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>

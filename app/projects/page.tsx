@@ -3,15 +3,10 @@
 import Link from 'next/link'
 import {
   Rocket,
-  Satellite,
   Code,
-  Smartphone,
   Database,
-  GitBranch,
-  Play,
   CheckCircle,
   Clock,
-  Github
 } from 'lucide-react'
 
 export default function Projects() {
@@ -53,99 +48,56 @@ export default function Projects() {
   ]
 
   const ProjectCard = ({ project, isOngoing }: { project: any, isOngoing: boolean }) => (
-    <div className="glass-card border grid-line hover:border-cyan-400 transition-all duration-300 group">
-      <div className="p-8">
-        {/* Header with Icon and Status */}
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex items-center space-x-4">
-            <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-glow`}>
-              <project.icon className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-              <div className="flex items-center space-x-2">
-                <span className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-sm font-medium ${
-                  isOngoing 
-                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'
-                }`}>
-                  {isOngoing ? <Clock className="w-4 h-4" /> : <CheckCircle className="w-4 h-4" />}
-                  <span>{project.status}</span>
-                </span>
-              </div>
-            </div>
+    <article className="group relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-gradient-to-br from-white/[0.07] to-transparent p-7 transition duration-300 hover:-translate-y-1 hover:border-amber-200/40">
+      <div className={`absolute -right-8 -top-10 h-36 w-36 rounded-full bg-gradient-to-br ${project.color} opacity-30 blur-2xl`} />
+      <div className="relative">
+        <div className="flex items-start justify-between gap-4">
+          <div className={`grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br ${project.color}`}>
+            <project.icon className="h-7 w-7 text-white" />
           </div>
+          <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs ${
+            isOngoing
+              ? "border border-cyan-300/30 bg-cyan-300/10 text-cyan-100"
+              : "border border-emerald-300/30 bg-emerald-300/10 text-emerald-100"
+          }`}>
+            {isOngoing ? <Clock className="h-3.5 w-3.5" /> : <CheckCircle className="h-3.5 w-3.5" />}
+            {project.status}
+          </span>
         </div>
-
-        {/* Description */}
-        <p className="text-gray-300 leading-relaxed mb-6">
-          {project.description}
-        </p>
-
-        {/* Technologies */}
-        <div className="mb-8">
-          <h4 className="text-lg font-semibold text-white mb-4">Kullanılan Teknolojiler</h4>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech: string, index: number) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-white/5 border border-white/10 text-gray-300 text-sm rounded-full hover:bg-white/10 transition-colors duration-300"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+        <h3 className="mt-8 text-3xl text-white">{project.title}</h3>
+        <p className="mt-3 leading-relaxed text-zinc-400">{project.description}</p>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {project.technologies.map((tech: string) => (
+            <span key={tech} className="rounded-full bg-black/30 px-3 py-1 text-xs text-zinc-300">
+              {tech}
+            </span>
+          ))}
         </div>
-
-        {/* Actions */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-medium opacity-50 cursor-not-allowed">
-            <span>Detaylar</span>
-            <Play className="w-5 h-5" />
-          </div>
-          
-          <div className="flex items-center space-x-3 border border-gray-600 text-gray-300 px-6 py-3 rounded-full font-medium opacity-50 cursor-not-allowed">
-            <Github className="w-5 h-5" />
-            <span>GitHub</span>
-          </div>
-          
-          <span className="text-sm text-gray-400 italic self-center">Yakında yayınlanacak</span>
-        </div>
+        <p className="mt-6 text-sm italic text-zinc-500">Depo ve detaylar yakında yayınlanacak.</p>
       </div>
-    </div>
+    </article>
   )
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full px-6 py-3 mb-8">
-              <Code className="w-5 h-5 text-white" />
-              <span className="text-sm font-medium text-white">Projeler</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Yenilikçi
-              <span className="text-gradient block">Projeler</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Bilgisayar Mühendisliği öğrencisi ve dijital mimar
-            </p>
-          </div>
-        </div>
+      <section className="relative mx-auto max-w-6xl px-4 pb-6 pt-6 sm:px-6">
+        <p className="text-xs uppercase tracking-[0.22em] text-amber-200/80">Seçilen işler</p>
+        <h1 className="mt-3 max-w-3xl text-5xl text-white sm:text-7xl">
+          Yenilikçi
+          <span className="text-gradient block">projeler</span>
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg text-zinc-300">
+          Uydu teknolojisinden kampüs platformuna, üzerinde çalıştığım ve tamamladığım işler.
+        </p>
       </section>
 
       {/* Ongoing Projects */}
-      <section className="py-20 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Devam Eden Projeler</h2>
-            <p className="text-gray-400 text-lg">Bilgisayar Mühendisliği öğrencisi ve dijital mimar</p>
+      <section className="py-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mb-8">
+            <h2 className="text-3xl text-white sm:text-4xl">Devam eden</h2>
+            <p className="mt-2 text-zinc-400">Şu anda ekiple yürüttüğüm iş.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -157,11 +109,11 @@ export default function Projects() {
       </section>
 
       {/* Completed Projects */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tamamlanmış Projeler</h2>
-            <p className="text-gray-400 text-lg">Bilgisayar Mühendisliği öğrencisi ve dijital mimar</p>
+      <section className="py-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mb-8">
+            <h2 className="text-3xl text-white sm:text-4xl">Tamamlanan</h2>
+            <p className="mt-2 text-zinc-400">Yayına hazırlanan ürünler.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -173,23 +125,17 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#050505]">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="glass-card border grid-line p-12 neon-glow-cyan">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Hazır mısınız?
-            </h2>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Her türlü soru ve iş birliği teklifleriniz için bana ulaşabilirsiniz.
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 sm:flex-row sm:items-end sm:p-10">
+          <div>
+            <h2 className="text-3xl text-white sm:text-4xl">Birlikte üretelim</h2>
+            <p className="mt-3 max-w-xl text-zinc-400">
+              Soru ve iş birliği teklifleri için doğrudan yazabilirsin.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
-                İş Birliği
-              </Link>
-              <Link href="/certificates" className="btn-secondary">
-                Sertifikalar
-              </Link>
-            </div>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/contact" className="btn-primary">İş birliği</Link>
+            <Link href="/certificates" className="btn-secondary">Sertifikalar</Link>
           </div>
         </div>
       </section>
