@@ -11,7 +11,6 @@ const links = [
   { href: "/projects", label: "Projeler" },
   { href: "/skills", label: "Yetenekler" },
   { href: "/certificates", label: "Sertifikalar" },
-  { href: "/feed", label: "Akış" },
 ];
 
 export default function Navbar() {

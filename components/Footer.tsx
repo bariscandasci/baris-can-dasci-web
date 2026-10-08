@@ -28,7 +28,6 @@ export default function Footer() {
     { name: "Projeler", href: "/projects" },
     { name: "Yetenekler", href: "/skills" },
     { name: "Sertifikalar", href: "/certificates" },
-    { name: "Akış", href: "/feed" },
     { name: "İletişim", href: "/contact" },
   ];
 
