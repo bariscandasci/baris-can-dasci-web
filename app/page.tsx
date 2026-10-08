@@ -150,7 +150,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#12141b] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
             <div className="relative aspect-[4/5]">
               <Image
-                src="/resimler/baris.jpeg"
+                src="/resimler/baris.jpg"
                 alt="Barış Can Daşcı"
                 fill
                 priority

@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   keywords: "Barış Can Daşcı, Next.js, Tailwind CSS, web geliştirme, portfolyo",
   authors: [{ name: "Barış Can Daşcı" }],
   icons: {
-    icon: [{ url: "/resimler/baris.jpeg", type: "image/jpeg" }],
-    shortcut: "/resimler/baris.jpeg",
-    apple: "/resimler/baris.jpeg",
+    icon: [{ url: "/resimler/baris.jpg", type: "image/jpeg" }],
+    shortcut: "/resimler/baris.jpg",
+    apple: "/resimler/baris.jpg",
   },
 };
 

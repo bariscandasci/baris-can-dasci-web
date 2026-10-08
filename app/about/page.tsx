@@ -36,7 +36,7 @@ export default function About() {
         <div className="relative lg:col-span-5">
           <div className="overflow-hidden rounded-[2rem] border border-white/10">
             <Image
-              src="/resimler/baris.jpeg"
+              src="/resimler/baris.jpg"
               alt="Barış Can Daşcı"
               width={720}
               height={900}
