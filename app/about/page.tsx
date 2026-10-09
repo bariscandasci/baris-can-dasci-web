@@ -22,11 +22,10 @@ const manifesto = [
 ];
 
 const groups = [
-  { title: "Diller", items: ["C", "Java", "Python", "JavaScript", "SQL"] },
-  { title: "Web", items: ["HTML", "CSS", "Next.js", "Node.js"] },
-  { title: "Veri", items: ["Firebase", "MongoDB"] },
-  { title: "Sistem", items: ["Git", "Linux"] },
-  { title: "Yapay zeka", items: ["Machine Learning", "Data Analysis", "Python Libraries"] },
+  { title: "Diller", items: ["Java", "TypeScript", "JavaScript", "Python", "Go", "PHP", "C", "SQL"] },
+  { title: "Ürün", items: ["React Native", "Expo", "Firebase", "Gradio", "Godot"] },
+  { title: "Yapay zeka", items: ["RAG", "Phi-3.5", "OpenAI API", "Foundry Local"] },
+  { title: "Sistem", items: ["Linux", "Git", "Sanal sunucu", "VirtualBox"] },
 ];
 
 export default function About() {
@@ -52,11 +51,10 @@ export default function About() {
             <span className="text-gradient block">liderlikle birleştiriyorum.</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300">
-            Karabük Üniversitesi Bilgisayar Mühendisliği 2. sınıf öğrencisiyim. Hazırlık eğitimimin
-            hemen ardından Amerika&apos;da Work and Travel programına katılarak global bir bakış
-            açısı kazandım. Karabük&apos;e döndüğümde bu vizyonu yerel bir üretim gücüne dönüştürmek
-            için kendi teknoloji kulübümü kurdum. Şu anda ekibimle Teknofest projeleri üzerinde
-            çalışıyor, mühendislik disiplinini liderlik ve inovasyonla harmanlıyorum.
+            Karabük Üniversitesi&apos;nde bilgisayar mühendisliği okuyorum. Eylül 2024&apos;te başladım,
+            ortalamam 3.09. 2025 yazında Virginia&apos;da dört aylık Work and Travel programını
+            tamamladım. GEPTEK&apos;in kurucu başkanıyım. PUHU uydu takımında yazılım ekibini
+            yönetiyorum, Hicaz Hyperloop&apos;ta aviyonik ve haberleşme üzerine çalışıyorum.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/projects" className="btn-primary">
@@ -72,8 +70,8 @@ export default function About() {
         {[
           ["Okul", "Karabük Üniversitesi"],
           ["Bölüm", "Bilgisayar Mühendisliği"],
-          ["Sınıf", "2. sınıf"],
-          ["Dil", "İngilizce B1 / B2"],
+          ["Ortalama", "3.09 / 4.00"],
+          ["Başlangıç", "Eylül 2024"],
         ].map(([label, value]) => (
           <div key={label} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
             <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">{label}</p>
@@ -102,10 +100,11 @@ export default function About() {
         </div>
         <ol className="space-y-6 lg:col-span-8">
           {[
-            ["Eğitim", "Karabük Üniversitesi, Bilgisayar Mühendisliği, 2. sınıf."],
-            ["Deneyim", "Work and Travel, Amerika. Global bir çalışma ortamı."],
-            ["Liderlik", "Teknoloji kulübü kurucusu ve Teknofest ekip kaptanı."],
-            ["Odak", "PUHU uydu projesi: uzay araştırmaları ve ekip koordinasyonu."],
+            ["Eğitim", "Karabük Üniversitesi, Bilgisayar Mühendisliği, Eylül 2024 – devam. Ocak 2026’da Gençlik ve Spor Bakanlığı 10. Mühendislik Kış Kampı."],
+            ["Staj", "Tepe Kurumsal’da donanım stajı (29 Haziran – 27 Temmuz 2026, Ankara) ve Microsoft’ta yapay zeka geliştirme stajı (29 Haziran – 24 Temmuz 2026)."],
+            ["Yurt dışı", "Work and Travel, Virginia, yaz 2025. Dört aylık kültür değişim programı."],
+            ["Liderlik", "GEPTEK kurucu başkanı, 2025–2026. TÜBİTAK Deneyap mentoru, Mart 2026’dan beri."],
+            ["Takımlar", "PUHU yazılım ekip lideri (Kasım 2025 – devam). Hicaz Hyperloop aviyonik (Ekim 2025 – devam). GEPTEK roket simülasyon lideri (Eylül 2025 – Ocak 2026)."],
           ].map(([title, text]) => (
             <li key={title} className="border-l border-amber-200/40 pl-5">
               <h3 className="text-xl text-white">{title}</h3>

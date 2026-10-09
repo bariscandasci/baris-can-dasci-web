@@ -35,7 +35,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Konum",
-      detail: "Ankara / Karabük, Türkiye",
+      detail: "Ankara, Türkiye",
       link: "https://maps.google.com",
       color: "from-purple-400 to-pink-500"
     }

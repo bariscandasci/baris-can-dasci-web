@@ -29,7 +29,7 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: "Barış Can Daşcı",
-  description: "Geleceği kodla inşa ediyoruz - Bilgisayar Mühendisliği öğrencisi ve dijital mimar",
+  description: "Karabük Üniversitesi bilgisayar mühendisliği öğrencisi. PUHU yazılım ekip lideri ve GEPTEK kurucu başkanı.",
   keywords: "Barış Can Daşcı, Next.js, Tailwind CSS, web geliştirme, portfolyo",
   authors: [{ name: "Barış Can Daşcı" }],
   icons: {

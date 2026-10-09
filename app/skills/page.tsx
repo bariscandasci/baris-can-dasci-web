@@ -7,54 +7,52 @@ import {
   Settings,
   Server,
   GitBranch,
-  Cloud,
-  Palette,
   Network
 } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Programlama Dilleri",
+      title: "Programlama dilleri",
       icon: Code,
       color: "from-cyan-400 to-blue-500",
-      skills: ["C", "Java", "Python", "JavaScript", "SQL"]
+      skills: ["Java", "TypeScript", "JavaScript", "Python", "Go", "PHP", "C", "SQL", "HTML", "CSS"]
     },
     {
-      title: "Web Geliştirme",
+      title: "Çerçeveler ve teknolojiler",
       icon: Globe,
       color: "from-indigo-400 to-purple-500",
-      skills: ["HTML", "CSS", "Next.js", "Node.js"]
+      skills: ["React Native", "Expo", "Firebase", "REST API", "Godot", "Gradio"]
     },
     {
-      title: "Veri Tabanları",
-      icon: Database,
-      color: "from-purple-400 to-pink-500",
-      skills: ["Firebase", "MongoDB"]
-    },
-    {
-      title: "Sistem & Altyapı",
-      icon: Server,
-      color: "from-cyan-400 to-indigo-500",
-      skills: ["Git", "Linux"]
-    },
-    {
-      title: "Yapay Zeka & Veri Bilimi",
+      title: "Yapay zeka",
       icon: Brain,
       color: "from-blue-400 to-cyan-500",
-      skills: ["Machine Learning", "Data Analysis", "Python Libraries"]
+      skills: ["RAG", "Microsoft Foundry Local", "Phi-3.5", "Qwen3-Embedding", "OpenAI API"]
+    },
+    {
+      title: "Sistem ve araçlar",
+      icon: Server,
+      color: "from-cyan-400 to-indigo-500",
+      skills: ["Linux", "Git", "GitHub", "VirtualBox", "Sanal sunucu", "Adobe Animate", "Altium Designer"]
+    },
+    {
+      title: "Mühendislik araçları",
+      icon: Rocket,
+      color: "from-amber-400 to-orange-500",
+      skills: ["OpenRocket", "Aviyonik haberleşme"]
     }
   ];
 
   const technologies = [
-    { name: "Next.js", icon: Rocket, color: "text-cyan-400" },
+    { name: "Python", icon: Code, color: "text-cyan-400" },
     { name: "TypeScript", icon: Code, color: "text-blue-400" },
-    { name: "Tailwind CSS", icon: Palette, color: "text-indigo-400" },
-    { name: "MongoDB", icon: Database, color: "text-green-400" },
-    { name: "Docker", icon: Server, color: "text-purple-400" },
+    { name: "React Native", icon: Rocket, color: "text-indigo-400" },
+    { name: "Firebase", icon: Database, color: "text-amber-300" },
+    { name: "RAG", icon: Brain, color: "text-emerald-300" },
+    { name: "Linux", icon: Server, color: "text-zinc-200" },
     { name: "Git", icon: GitBranch, color: "text-pink-400" },
-    { name: "AWS", icon: Cloud, color: "text-gray-400" },
-    { name: "TensorFlow", icon: Brain, color: "text-yellow-400" }
+    { name: "OpenRocket", icon: Rocket, color: "text-orange-300" }
   ];
 
   return (
@@ -67,7 +65,7 @@ export default function Skills() {
           <span className="text-gradient block">ve uzmanlık</span>
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-zinc-300">
-          Bilgisayar mühendisliği ile arayüz tasarımının kesişiminde kullandığım araçlar.
+          CV’deki diller, RAG araçları, Linux ve mühendislik simülasyonu.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="/projects" className="btn-primary">Projeleri incele</a>

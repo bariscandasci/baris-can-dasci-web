@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Award, ShieldCheck, ExternalLink, Brain, Code, Monitor, GraduationCap } from 'lucide-react'
+import { Award, ShieldCheck, ExternalLink, Brain, Code, Monitor, GraduationCap, Cpu, Factory } from 'lucide-react'
 
 export default function Certificates() {
   const certificates = [
     {
       id: 1,
       title: "Kariyer Zirvesi '25",
-      issuer: "Gaziantep İhracatçı Birlikleri",
+      issuer: "BTK-ICT",
       date: "2025",
       skills: [
         "Kariyer Planlama",
@@ -67,19 +67,44 @@ export default function Certificates() {
       image: "/resimler/Adobe animate ile animasyon.jpg"
     },
     {
-      id: 5,
-      title: "Dış Ticarette Hatalar ve Çözümler",
-      issuer: "Gaziantep İhracatçı Birlikleri",
-      date: "2024",
-      skills: [
-        "Dış Ticaret Mevzuatı",
-        "Problem Çözme",
-        "Operasyonel Süreçler",
-        "Çözüm Önerileri"
-      ],
-      verifyUrl: "/resimler/Dış ticarette yapılan hatalar ve çözüm önerileri.jpg",
+      id: 6,
+      title: "kapsül+ Savunma Sanayi",
+      issuer: "Kariyer ve Yetkinlik Hamlesi",
+      date: "Şubat – Mart 2026",
+      skills: ["Savunma sanayi sistemleri", "Yetkinlik"],
+      verifyUrl: "",
       icon: ShieldCheck,
-      image: "/resimler/Dış ticarette yapılan hatalar ve çözüm önerileri.jpg"
+      image: ""
+    },
+    {
+      id: 7,
+      title: "Altium Designer",
+      issuer: "PCB ve çip tasarımı",
+      date: "",
+      skills: ["PCB", "Çip tasarımı"],
+      verifyUrl: "",
+      icon: Cpu,
+      image: ""
+    },
+    {
+      id: 8,
+      title: "Ford Otosan",
+      issuer: "Kariyer ve Gelişim Haftası",
+      date: "Nisan 2026",
+      skills: ["Kariyer", "Gelişim"],
+      verifyUrl: "",
+      icon: Factory,
+      image: ""
+    },
+    {
+      id: 9,
+      title: "Gamma",
+      issuer: "BTK Akademi",
+      date: "",
+      skills: ["Üretim", "Dijital içerik"],
+      verifyUrl: "",
+      icon: Monitor,
+      image: ""
     }
   ];
 
@@ -114,21 +139,26 @@ export default function Certificates() {
                 <div className="p-8">
                   {/* Certificate Image with Badge */}
                   <div className="relative mb-8">
-                    <Link href={cert.verifyUrl} target="_blank" rel="noopener noreferrer">
-                      <div className="relative rounded-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                        <Image
-                          src={cert.image}
-                          alt={`${cert.title} Sertifikası`}
-                          width={600}
-                          height={400}
-                          className="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                        />
-                        {/* Overlaid Badge */}
-                        <div className="absolute top-4 left-4 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl p-3 shadow-lg backdrop-blur-md border border-white/20">
-                          <cert.icon className="w-6 h-6 text-white" />
+                    {cert.image ? (
+                      <Link href={cert.verifyUrl} target="_blank" rel="noopener noreferrer">
+                        <div className="relative rounded-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-500 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                          <Image
+                            src={cert.image}
+                            alt={`${cert.title} Sertifikası`}
+                            width={600}
+                            height={400}
+                            className="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                          />
+                          <div className="absolute top-4 left-4 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl p-3 shadow-lg backdrop-blur-md border border-white/20">
+                            <cert.icon className="w-6 h-6 text-white" />
+                          </div>
                         </div>
+                      </Link>
+                    ) : (
+                      <div className="flex h-40 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03]">
+                        <cert.icon className="h-10 w-10 text-cyan-200" />
                       </div>
-                    </Link>
+                    )}
                   </div>
 
                   <div className="mb-6">
@@ -149,16 +179,19 @@ export default function Certificates() {
                   </div>
 
                   <div className="pt-6 border-t border-white/10 flex justify-between items-center">
-                    <Link
-                      href={cert.verifyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-bold text-sm"
-                    >
-                      <span>Sertifikayı Tam Boyut Gör</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
-                    
+                    {cert.verifyUrl ? (
+                      <Link
+                        href={cert.verifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-bold text-sm"
+                      >
+                        <span>Sertifikayı Tam Boyut Gör</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    ) : (
+                      <span className="text-sm text-zinc-500">CV’de kayıtlı</span>
+                    )}
                     <ShieldCheck className="w-6 h-6 text-green-500/50" />
                   </div>
                 </div>

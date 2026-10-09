@@ -3,18 +3,20 @@ import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Github, Linkedin } from "lucide-react";
 
 const skills = [
-  "C",
   "Java",
-  "Python",
+  "TypeScript",
   "JavaScript",
+  "Python",
+  "Go",
+  "PHP",
+  "C",
   "SQL",
-  "Next.js",
-  "Node.js",
+  "React Native",
   "Firebase",
-  "MongoDB",
-  "Git",
+  "RAG",
   "Linux",
-  "Machine Learning",
+  "Git",
+  "OpenAI",
 ];
 
 const pillars = [
@@ -37,26 +39,26 @@ const pillars = [
 
 const projects = [
   {
-    title: "PUHU Uydu Projesi",
-    status: "Devam ediyor",
-    text: "Uzay araştırmaları ve uydu teknolojileri. Ekip liderliği ve koordinasyon.",
-    tags: ["Python", "Docker", "REST API"],
+    title: "PUHU Uydu Takımı",
+    status: "Yazılım ekip lideri",
+    text: "Mobil uydu terminalinde yazılım yönetimi ve otonom sinyal iyileştirme için yapay zeka entegrasyonu.",
+    tags: ["Yapay zeka", "Ekip liderliği"],
     href: "/projects",
     span: "md:col-span-2",
   },
   {
-    title: "Kampüs Hub",
-    status: "Tamamlandı",
-    text: "Ders takibi, etkinlikler ve öğrenci toplulukları için merkezi platform.",
-    tags: ["Next.js", "React Native"],
+    title: "Çevrimdışı BT asistanı",
+    status: "2026",
+    text: "Microsoft Foundry Local üzerinde, belgelere sadık kalan çevrimdışı bir RAG yardım masası.",
+    tags: ["Python", "Phi-3.5", "Gradio"],
     href: "/projects",
     span: "",
   },
   {
-    title: "Mali Günlük",
-    status: "Tamamlandı",
-    text: "Harcama takibi ve bütçe planlama için hibrit finans uygulaması.",
-    tags: ["Java", "Firebase"],
+    title: "ShareNote",
+    status: "2025",
+    text: "Altı kişilik ekiple geliştirdiğim, yapay zeka özetli not paylaşım platformu.",
+    tags: ["TypeScript", "Firebase", "OpenAI"],
     href: "/projects",
     span: "",
   },
@@ -109,6 +111,9 @@ export default function Home() {
             <Link href="/about" className="btn-secondary">
               Hikayem
             </Link>
+            <a href="/CV.pdf" download className="btn-secondary">
+              CV indir
+            </a>
             <a
               href="https://github.com/bariscandasci"
               target="_blank"
@@ -131,9 +136,9 @@ export default function Home() {
 
           <dl className="rise rise-delay-3 mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-6">
             {[
-              ["02", "Sınıf"],
-              ["03", "Proje"],
-              ["05", "Sertifika"],
+              ["3.09", "GPA"],
+              ["02", "Staj"],
+              ["03", "Takım"],
             ].map(([value, label]) => (
               <div key={label}>
                 <dt className="text-3xl text-white">{value}</dt>
@@ -163,11 +168,11 @@ export default function Home() {
 
           <div className="absolute -left-3 top-8 hidden rounded-2xl border border-white/10 bg-[#0d1016]/90 px-4 py-3 shadow-xl backdrop-blur md:block">
             <p className="text-[11px] uppercase tracking-[0.16em] text-zinc-500">Rol</p>
-            <p className="mt-1 text-sm font-medium text-white">Teknofest ekip kaptanı</p>
+            <p className="mt-1 text-sm font-medium text-white">PUHU yazılım lideri</p>
           </div>
           <div className="absolute -right-2 bottom-24 hidden rounded-2xl border border-amber-200/20 bg-[#14110c]/90 px-4 py-3 shadow-xl backdrop-blur md:block">
             <p className="text-[11px] uppercase tracking-[0.16em] text-amber-200/80">Kurucu</p>
-            <p className="mt-1 text-sm font-medium text-white">Teknoloji kulübü</p>
+            <p className="mt-1 text-sm font-medium text-white">GEPTEK kurucu başkan</p>
           </div>
         </div>
       </section>
@@ -253,11 +258,11 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 sm:px-6 lg:grid-cols-2">
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 sm:p-10">
           <p className="text-xs uppercase tracking-[0.22em] text-amber-200/80">Hakkımda</p>
-          <h2 className="mt-3 text-4xl text-white">Kulüp kurdum, ekibi yönetiyorum.</h2>
+          <h2 className="mt-3 text-4xl text-white">Staj, takım ve kulüp.</h2>
           <p className="mt-5 leading-relaxed text-zinc-300">
-            Hazırlığın ardından Amerika&apos;da Work and Travel programına katıldım. Karabük&apos;e
-            döndüğümde bu bakış açısını yerel bir üretime çevirmek için kendi teknoloji kulübümü
-            kurdum. Şu anda ekibimle Teknofest projeleri üzerinde çalışıyorum.
+            Karabük Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. 2025 yazında Virginia&apos;da
+            dört aylık Work and Travel programını tamamladım. GEPTEK&apos;in kurucu başkanıyım;
+            PUHU&apos;da yazılım ekibini, Hicaz Hyperloop&apos;ta aviyonik ve haberleşmeyi yürütüyorum.
           </p>
           <Link href="/about" className="btn-primary mt-8">
             Devamını oku

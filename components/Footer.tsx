@@ -84,8 +84,8 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h4 className="text-sm uppercase tracking-[0.18em] text-zinc-500">Şu an</h4>
             <p className="mt-4 text-sm leading-relaxed text-zinc-300">
-              Karabük Üniversitesi Bilgisayar Mühendisliği, 2. sınıf. Teknofest ekip kaptanı ve
-              teknoloji kulübü kurucusu.
+              Karabük Üniversitesi Bilgisayar Mühendisliği, GPA 3.09. PUHU yazılım ekip lideri
+              ve GEPTEK kurucu başkanı.
             </p>
             <a href="/CV.pdf" download className="btn-secondary mt-6 text-sm">
               CV İndir

@@ -3,8 +3,11 @@
 import Link from 'next/link'
 import {
   Rocket,
-  Code,
+  Radio,
+  Brain,
+  Server,
   Database,
+  Users,
   CheckCircle,
   Clock,
 } from 'lucide-react'
@@ -13,37 +16,79 @@ export default function Projects() {
   
   const ongoingProjects = [
     {
-      id: 2,
-      title: 'PUHU Uydu Projesi',
-      description: 'Uzay araştırmaları ve uydu teknolojileri üzerine proje',
-      technologies: ['Python', 'Docker', 'REST API', 'Test Automation'],
-      status: 'Liderlik ve Koordinasyon',
+      id: 1,
+      title: 'PUHU Uydu Takımı',
+      description: 'Mobil uydu terminalinin yazılım yönetimi. Otonom sinyal iyileştirme için yapay zeka destekli veri işleme birimleri.',
+      technologies: ['Yazılım liderliği', 'Yapay zeka', 'Uydu'],
+      status: 'Kasım 2025 – devam',
       icon: Rocket,
-      githubUrl: 'https://github.com/bariscandasci/hyperloop-test',
       color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      id: 2,
+      title: 'Hicaz Hyperloop',
+      description: 'Yüksek hızlı sensör verisini işleyen algoritmalar ve kapsül ile yer istasyonu arasında düşük gecikmeli haberleşme.',
+      technologies: ['Aviyonik', 'Haberleşme', 'Telemetri'],
+      status: 'Ekim 2025 – devam',
+      icon: Radio,
+      color: 'from-cyan-500 to-blue-500'
     }
   ]
 
   const completedProjects = [
     {
       id: 3,
-      title: 'Kampüs Hub',
-      description: 'Next.js ve React Native kullanarak geliştirdiğim öğrenci odaklı bir platform. Ders takibi, etkinlik duyuruları ve öğrenci toplulukları için merkezi bir çözüm.',
-      technologies: ['Next.js', 'React Native', 'Tailwind CSS', 'Node.js'],
-      status: 'Tamamlandı',
-      icon: Code,
-      githubUrl: 'https://github.com/bariscandasci/kampus-hub',
-      color: 'from-cyan-500 to-blue-500'
+      title: 'Çevrimdışı BT destek asistanı',
+      description: 'Microsoft Foundry Local üzerinde, belgelere sadık kalan çevrimdışı bir yardım masası. Phi-3.5 yalnızca düşük riskli giriş cümlelerini üretir; Active Directory, VPN, Linux sunucuları, donanım ve yazıcı belgelerinde NumPy ve SQLite ile arama yapılır.',
+      technologies: ['Python', 'Phi-3.5', 'Gradio', 'RAG'],
+      status: '2026',
+      icon: Brain,
+      color: 'from-amber-400 to-orange-500'
     },
     {
       id: 4,
-      title: 'Mali Günlük (Financial Diary)',
-      description: 'Java Swing, React Native ve Firebase bulut entegrasyonu içeren hibrit bir finans uygulaması. Harcama takibi, bütçe planlama ve veri analizi özellikleri sunar.',
-      technologies: ['Java Swing', 'React Native', 'Firebase', 'Cloud Functions'],
-      status: 'Tamamlandı',
+      title: 'Makale özetleme asistanı',
+      description: 'Aynı geri getirme ve çıkarımsal üretim mimarisinin buluta bağlı hali. Makaleleri OpenAI API ile özetler.',
+      technologies: ['Python', 'RAG', 'OpenAI API'],
+      status: '2026',
+      icon: Brain,
+      color: 'from-violet-500 to-fuchsia-500'
+    },
+    {
+      id: 5,
+      title: 'Mali Günlük Pro',
+      description: 'Java Swing ve React Native ile gerçek zamanlı senkronlu bir harcama sistemi. Firebase üzerinde kimlik doğrulama ve harcama görselleştirme.',
+      technologies: ['Java Swing', 'React Native', 'Firebase'],
+      status: '2026',
       icon: Database,
-      githubUrl: 'https://github.com/bariscandasci/financial-diary',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-emerald-500 to-teal-500'
+    },
+    {
+      id: 6,
+      title: 'ShareNote',
+      description: 'Yapay zeka ile otomatik özetleyen, ortak not paylaşım platformu. Altı kişilik ekibin görev dağılımını ve Git akışını yönettim.',
+      technologies: ['TypeScript', 'Firebase', 'OpenAI API'],
+      status: '2025',
+      icon: Users,
+      color: 'from-sky-500 to-indigo-500'
+    },
+    {
+      id: 7,
+      title: 'Kişisel sunucu',
+      description: 'Tepe Kurumsal stajında Bilkent Holding sunucu mimarisini incelemek için kurup yönettiğim kişisel sunucu.',
+      technologies: ['Linux', 'Self-hosting'],
+      status: '2026',
+      icon: Server,
+      color: 'from-zinc-500 to-slate-600'
+    },
+    {
+      id: 8,
+      title: 'GEPTEK Roket Takımı',
+      description: 'OpenRocket ile orta irtifa roketlerde kararlılık ve paraşüt açılışı simülasyonu. Hedef apogee için aerodinamik parametreleri iyileştirdim.',
+      technologies: ['OpenRocket', 'Simülasyon'],
+      status: 'Eylül 2025 – Ocak 2026',
+      icon: Rocket,
+      color: 'from-rose-500 to-orange-500'
     }
   ]
 
@@ -73,7 +118,6 @@ export default function Projects() {
             </span>
           ))}
         </div>
-        <p className="mt-6 text-sm italic text-zinc-500">Depo ve detaylar yakında yayınlanacak.</p>
       </div>
     </article>
   )
@@ -88,7 +132,7 @@ export default function Projects() {
           <span className="text-gradient block">projeler</span>
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-zinc-300">
-          Uydu teknolojisinden kampüs platformuna, üzerinde çalıştığım ve tamamladığım işler.
+          PUHU ve Hicaz’taki görevler, RAG sistemleri ve stajda kurduğum sunucu.
         </p>
       </section>
 
@@ -97,7 +141,7 @@ export default function Projects() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mb-8">
             <h2 className="text-3xl text-white sm:text-4xl">Devam eden</h2>
-            <p className="mt-2 text-zinc-400">Şu anda ekiple yürüttüğüm iş.</p>
+            <p className="mt-2 text-zinc-400">Hâlâ üzerinde çalıştığım takımlar.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -113,7 +157,7 @@ export default function Projects() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mb-8">
             <h2 className="text-3xl text-white sm:text-4xl">Tamamlanan</h2>
-            <p className="mt-2 text-zinc-400">Yayına hazırlanan ürünler.</p>
+            <p className="mt-2 text-zinc-400">Bitirdiğim ürünler ve kapanmış takım görevi.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
