@@ -174,18 +174,18 @@ export default function Home() {
 
       <section className="border-y border-white/10 bg-black/20 py-4">
         <div className="marquee">
-          {[0, 1].map((copy) => (
-            <div key={copy} className="marquee-track" aria-hidden={copy === 1}>
-              {skills.map((skill) => (
+          <div className="marquee-track">
+            {Array.from({ length: 12 }, () => skills)
+              .flat()
+              .map((skill, index) => (
                 <span
-                  key={`${copy}-${skill}`}
+                  key={`${skill}-${index}`}
                   className="shrink-0 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm whitespace-nowrap text-zinc-200"
                 >
                   {skill}
                 </span>
               ))}
-            </div>
-          ))}
+          </div>
         </div>
       </section>
 
