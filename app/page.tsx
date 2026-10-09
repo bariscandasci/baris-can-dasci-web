@@ -78,8 +78,6 @@ const certificates = [
 ];
 
 export default function Home() {
-  const loop = [...skills, ...skills];
-
   return (
     <div>
       <section className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-6 sm:px-6 lg:grid-cols-12 lg:pt-10">
@@ -176,16 +174,18 @@ export default function Home() {
 
       <section className="border-y border-white/10 bg-black/20 py-4">
         <div className="marquee">
-          <div className="marquee-track gap-3 px-3">
-            {loop.map((skill, index) => (
-              <span
-                key={`${skill}-${index}`}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-200"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          {[0, 1].map((copy) => (
+            <div key={copy} className="marquee-track" aria-hidden={copy === 1}>
+              {skills.map((skill) => (
+                <span
+                  key={`${copy}-${skill}`}
+                  className="shrink-0 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm whitespace-nowrap text-zinc-200"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
